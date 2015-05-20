@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1, minimum-scale = 1, maximum-scale = 1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>Brackets</title>
+    <link rel="apple-touch-icon-precomposed" href="http://madness.blob.core.windows.net/content/images/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://madness.blob.core.windows.net/content/images/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://madness.blob.core.windows.net/content/images/touch-icon-iphone4.png" />
+    <link rel="apple-touch-startup-image" href="http://madness.blob.core.windows.net/content/images/startup.jpg" />
+	<link rel="stylesheet" href="http://madness.blob.core.windows.net/content/css/jqstyles.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="http://madness.blob.core.windows.net/content/css/jquery.mobile.simpledialog.min.css" />
+    <!-- Add to Home Screen Indicator START -->
+	<link rel="stylesheet" href="http://madness.blob.core.windows.net/content/css/add2home.css" />
+    <script type="text/javascript">
+    var addToHomeConfig = {
+		autostart: false,
+        animationIn: 'bubble',
+        animationOut: 'drop',
+        touchIcon:true,
+        message:'Add this Web App to your <strong>%device</strong> Home Screen.<br />Click %icon below.'
+    };
+    </script>
+	<script type="application/javascript" src="http://madness.blob.core.windows.net/scripts/add2home.js"></script>
+    <!-- Add to Home Screen Indicator END -->
+	<script src="http://madness.blob.core.windows.net/scripts/jquery-1.6.4.min.js"></script>
+	<script src='http://madness.blob.core.windows.net/scripts/jqm.v1.js'></script>
+	<script src='scripts/madness.js'></script>
+
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.js"></script>
+
+	<script type="text/javascript" src="http://madness.blob.core.windows.net/scripts/jquery.json2xml.js?4"></script>
+	<script type="text/javascript" src="http://madness.blob.core.windows.net/scripts/jcarousellite_cbs.js"></script>		
+
+    <script type="text/javascript">
+ 		 var _gaq = _gaq || [];
+		 //SET GOOGLE ANALYTICS ACCOUNT NUMBER HERE
+		 //TP Test Account: UA-29847892-1
+		 //CBS Live Account: UA-29899500-1
+		 _gaq.push(['_setAccount', 'UA-29847892-1']);
+ 	</script>
+    <script>
+		$(document).delegate('#openForgot', 'click', function() {
+		  // NOTE: The selector can be whatever you like, so long as it is an HTML element.
+		  //       If you prefer, it can be a member of the current page, or an anonymous div
+		  //       like shown.
+		  if(_gaq){
+				//console.log("GOOGLE ANALYTIC: forgot_id_password_dialog");
+				_gaq.push(['_trackPageview', 'forgot_id_password_dialog']);
+			}
+			
+		  $("#close-forgot-id-password").live('click',function(e) {
+			if(_gaq){
+				//console.log("GOOGLE ANALYTIC: login");
+				_gaq.push(['_trackPageview', 'login']);
+			}
+		  });
+		  $('<div>').simpledialog2({
+			mode: 'blank',
+			headerText: false,
+			headerClose: false,
+			forceInput: false,
+			blankContent : 
+			  "<div class='center-wrapper whiteContentBox'>To retrieve your username and/or password, please call<br /><a href='tel:1-800-915-9895'>1-800-915-9895</a></div>" +
+			  "<a id='close-forgot-id-password' rel='close' data-role='button' href='#'>OK</a>"
+		  })
+		})
+		
+		$(document).delegate('#openAccount', 'click', function() {
+		  // NOTE: The selector can be whatever you like, so long as it is an HTML element.
+		  //       If you prefer, it can be a member of the current page, or an anonymous div
+		  //       like shown.
+		  if(_gaq){
+				//console.log("GOOGLE ANALYTIC: open_account_dialog");
+				_gaq.push(['_trackPageview', 'open_account_dialog']);
+			}
+			
+		  $("#close-open-account").live('click',function(e) {
+			if(_gaq){
+				//console.log("GOOGLE ANALYTIC: login");
+				_gaq.push(['_trackPageview', 'login']);
+			}
+		  });
+		  $('<div>').simpledialog2({
+			mode: 'blank',
+			headerText: false,
+			headerClose: false,
+			forceInput: false,
+			blankContent : 
+			  "<div class='center-wrapper whiteContentBox'>Please visit CBSSports.com on your computer to register for an account.</div>" + 
+			  "<a id='close-open-account' rel='close' data-role='button' href='#'>OK</a>"
+		  })
+		})
+
+		
+		
+	</script>
+
+<script type="text/javascript">
+ 
+ // var _gaq = _gaq || [];
+  //_gaq.push(['_setAccount', 'UA-29847892-1']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+</head>
+<body id="home" class="ui-mobile-viewport">
+	
+	<!--Page Container -->
+ 	<div id="header" data-role="header" data-position="fixed"></div>     
+        <script>
+	    $('#header').load('includes/header.html',function(){
+		    $(".menu").hide();
+		    $('#header').trigger('create');
+		    $('#header > a').trigger('create');
+	    });
+
+
+	</script>
+        
+   
+	<div data-role="page" id="homePage" class="clearfix" data-url="home" data-name="home"></div>
+	<div data-role="page" id="login" class="clearfix" data-url="login" data-name="login" data-position="fixed" data-scroll="false">
+    
+        
+		<div id="content" data-role="content" data-scroll="false" data-position="fixed" class="group center-wrapper content noscroll">
+			<!--<a href="bracket.html" data-role="button">Test</a>-->
+            <img id="loginTitle" src="http://madness.blob.core.windows.net/content/images/bracketGames-logo.png" alt="Bracket Games">
+          <div id="login-bg" class="group">
+            	<p class="blueHeaderText">Please Login</p>
+                <form id="login-form" data-ajax="false" class="group">
+                <div>
+                	<label for="username" class="ui-hidden-accessible">Username:</label>
+                	<input class="formTextInput" type="text" name="username" id="username" placeholder="User ID" autocapitalize="off">
+                </div>
+                <div>
+                	<label for="password" class="ui-hidden-accessible">Password:</label>
+                	<input class="formTextInput" type="password" name="password" id="password" placeholder="Password">
+                </div>
+                
+                <div id="rememberCheckbox">
+                    <fieldset data-role="controlgroup">
+                       <input type="checkbox" name="checkremember" id="checkremember" data-role="none" data-mini="true" />
+                       <label for="checkremember">Remember Me</label>
+                    </fieldset>
+                </div>
+                    
+                    <input type="submit" name="signIn" value="Sign In" class="formSubmit" data-inline="true">
+                </form>
+                <a href="#" id="openForgot" data-button="false">Forget your ID? Forgot your Password?</a><br />
+                <a href="#" id="openAccount" data-button="false">Need an account?</a><br />
+            </div>
+            
+		</div>	
+	</div>
+	<div data-role="page" id="bracketpage" data-title="Brackets" class="clearfix" data-url="brackets" data-name="bracket">
+		
+		<div id="contentbracket" data-role="content" data-position="fixed" class="clearfix content">
+			<h1 id="BracketGames"><img src="http://madness.blob.core.windows.net/content/images/home_bracketgames_title.png" alt="Bracket Games" /></h1>
+			<ul id="brackets">
+				<li class="league">
+					<a href="bracket.html" class="bracketLeagueTitle orb bracket-link">League Name</a>
+					<a href="bracket.html" class="bracketTeamTitle bracket-link">Bracket Name</a>
+				</li>
+			</ul>
+		</div>	
+	</div>
+	
+	<div data-role="page" id="bracketOverviewPage" data-title="Brackets" class="clearfix" data-url="bracket_overview" data-name="bracket_overview">
+		
+		<div id="content" data-role="content" data-position="fixed" class="clearfix content ignoreScroll" data-scroll="true">
+			
+            <!--<a href="autofill.html" data-transition="pop" data-rel="dialog" id="tester"><div id="autoFill"></div></a><br />-->
+			<div id="bracketMeta">
+				<h1 id="leagueTitle" class="orb">Trailer Park League</h1>
+				<h2 id="teamTitle">Your Bracket Title</h2>
+				<h3 id="tapInstructions">Tap a region to view in detail.</h3>
+
+			</div>
+
+			<div id="bracketZoomedOut">
+				<ul id="BracketSouth" class="region">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketMidwest" class="region">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketWest" class="region">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketEast" class="region">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul id="BracketChampionship2">
+					<li id="north"></li>
+					<li id="finals"></li>
+					<li id="south"></li>
+				</ul>
+                
+                <ul id="BracketChampion">
+					<li ></li>
+					<li id="finalChampion"></li>
+					<li ></li>
+				</ul>
+
+				<ul id="BracketChampionship">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul id="BracketTiebreaker">
+					<li id="Tiebreaker"></li>
+				</ul>
+				<div id="BracketLabels">
+					
+					<div id="SouthLabel">South</div>
+					<div id="WestLabel">West</div>
+					<div id="EastLabel">East</div>
+					<div id="MidWestLabel">Midwest</div>
+					
+					<div id="TiebreakerLabel">Tiebreaker</div>
+					<div id="ChampionshipLabel">Championship</div>
+					<div id="TitleLabel">Division 1 Men's Bracket</div>
+				</div>
+				<div id="tapabbleArea">
+					<div class="South"></div>
+					<div class="East"></div>
+					<div class="West"></div>
+					<div class="Midwest"></div>
+					<div class="Championship"></div>
+					<div class="Tiebreaker"></div>
+				</div>
+				<div id="zoomedOutButtons">
+					<a id="bracketSubmit" href="#" data-role="button" data-inline="true" class="button-blue ui-disabled">Submit</a><a id="bracketClear" href="#" data-role="button" data-inline="true" class="button-blue">Clear</a>
+
+
+
+				</div>
+
+			</div>
+		</div>
+		<div data-role="dialog" id="confirm-clear" class="dialog-custom" data-url="confirm-clear" >
+	        <div data-role="content" class="center-wrapper whiteContentBox" style="height:240px !important; margin-top:50%;">
+	        	<h2 class="orb dialog-header">CONFIRM</h2>
+	        	<p class="dialogText">Are you sure you want to clear your bracket? All picks will be lost.</p>
+	        	<a href="#" data-role="button" data-inline="true" class="button-blue fixedWidthButton">Yes</a><a href="#" data-role="button" data-inline="true" data-rel="back" class="button-blue fixedWidthButton">No</a>
+	        </div>
+	    </div>
+		
+	</div>
+	<div data-role="page" id="bracketZoomedPage" data-title="Brackets" class="clearfix" data-url="bracket_zoomed" data-name="bracket_zoomed">
+		<script>
+			function zoomOut() {
+			        var page = "#bracket_overview?league="+cbs.activeLeague;
+			        //$.mobile.changePage("#bracketOverviewPage")
+				$.mobile.changePage(page)
+			}
+		</script>
+			<div id="headerMeta">
+                <!--<a href="autofill.html" data-transition="pop" data-rel="dialog" id="tester"><div id="autoFill"></div></a>-->
+				<div id="zoomOut" onclick="zoomOut()"></div>
+
+				<div id="RegionNav">
+					<div id="regionTitle" class="orb">EAST</div>
+					<div class="arrow-left"><img src="http://madness.blob.core.windows.net/content/images/left_arrow.png" alt="left" /></div>
+					<div class="arrow-right"><img src="http://madness.blob.core.windows.net/content/images/right_arrow.png" alt="right" /></div>
+				</div>
+
+			</div>
+	
+		<div id="content" data-role="content" data-position="fixed" class="clearfix content ignoreScroll" data-scroll="true">
+			<div id="bracketZoomedIn">
+				<a href="#bracketZoomedOut" id="bracketUnZoomButton" style="display:none;" data-direction="reverse" data-role="button" data-theme="b" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-b"></a>
+				<div id="BracketLabels">
+					<div id="EastLabel">East</div>
+					<div id="WestLabel">West</div>
+					<div id="MidWestLabel">Midwest</div>
+					<div id="SouthLabel">South</div>
+					<div id="TiebreakerLabel">Tiebreaker</div>
+					<div id="ChampionshipLabel">Championship</div>
+				</div>
+
+				<ul id="BracketEast" class="right region" data-region="east">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketMidwest" class="right region" data-region="midwest">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketWest" class="left region" data-region="west">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketSouth" class="left region" data-region="south">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+							<li class="game5"></li>
+							<li class="game6"></li>
+							<li class="game7"></li>
+							<li class="game8"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+							<li class="game3"></li>
+							<li class="game4"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round4">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="BracketChampionship" class="champion region" data-region="championship">
+					<li class="round round1">
+						<ul class="matchups">
+							<li class="game1"></li>
+							<li class="game2"></li>
+						</ul>
+					</li>
+					<li class="round round2">
+						<ul class="matchups">
+							<li class="game1"></li>
+						</ul>
+					</li>
+					<li class="round round3">
+						<ul class="matchups">
+							<li class="final"><a href=""></a></li>
+						</ul>
+						<span>Champion</span>
+					</li>
+				</ul>
+				<ul id="BracketTiebreaker" data-region="tiebreaker">
+					<li id="Tiebreaker"></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="dialog" id="confirm-clear" class="dialog-custom" data-url="confirm-clear" >
+	        <div data-role="content" class="center-wrapper whiteContentBox" style="height:240px !important; margin-top:50%;">
+	        	<h2 class="orb dialog-header">CONFIRM</h2>
+	        	<p class="dialogText">Are you sure you want to clear your bracket? All picks will be lost.</p>
+	        	<a href="#" data-role="button" data-inline="true" class="button-blue fixedWidthButton">Yes</a>
+			<!--<a href="#" data-role="button" data-inline="true" data-rel="back" class="button-blue fixedWidthButton">No</a>-->
+	        </div>
+	    </div>
+		
+	</div>
+    
+	<div data-role="page" id="standingspage" data-title="Brackets" class="clearfix" data-url="standings" data-name="standings">
+    
+        <div id="contentstandings" data-role="content" data-position="fixed" class="clearfix" style="position:relative;top:0px;left:0px">
+			<div id="subheader_bar" class="matchup_central_column_width sub_header_bar" style="position:relative;top:10px;left:0px">
+                <h1 class="orb pageHeader">STANDINGS</h1>
+				<p id="subheader_subtext" class="light_blue_text">League Name</p>
+			</div>
+			
+			<a id="mybracket" href="#">
+				Dwight's #2 Bracket
+			</a>
+			
+			<table id="bracketsdata" class="pre">
+			</table>
+			
+			<table id="bracketsdata" class="post">
+			</table>
+			
+			
+		</div>
+        	
+		
+	</div>
+<!-- region match picker -->
+	<div data-role="dialog" id="matchupPopupPage" class="dialog-custom" data-url="matchupAnalysisPage" data-region="" >
+		<a id="goback" href="#bracket_overview?league=tptleague" data-rel="back" style="display:none;">escape</a>
+		<div data-role="content" class="center-wrapper " id="matchup-list">
+			<div id="carouselContainer">
+				<div class="scroller-container">
+				<ul class="region-list">
+				</ul>
+				</div>
+			</div>
+		<a href="#" class="prev"><img border=0 src="http://madness.blob.core.windows.net/content/images/matchup-arrow-left.gif"></a>
+		<a href="#" class="next"><img border=0 src="http://madness.blob.core.windows.net/content/images/matchup-arrow-right.gif"></a>
+		<div style="display:none;"><a href="#" class="gofirst"></a></div>
+		<div class="debug"></div>
+		</div>
+	</div>
+<!-- single match picker -->
+	<div data-role="dialog" id="matchupPopupPageSingle" class="dialog-custom" data-url="matchupAnalysisPage" data-region="" >
+	<a id="goback2" href="#bracket_overview?league=tptleague" onclick="javascript:return false;" data-rel="back" style="display:none;">escape</a>
+        <div data-role="content" class="center-wrapper " id="matchup-listSingle">
+		<div id="carouselContainerSingle">
+			<div class="scroller-container-single" style="width:206px;">
+			<ul class="region-list-single" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; position: relative; list-style-type: none; z-index: 1; width: 1648px; left: 0px; ">
+				<li id="singleContainer" class="1" style="overflow-x: hidden; overflow-y: hidden; float: left; width: 206px; height: 152px; ">
+
+				</li>
+			</ul>
+			</div>
+			<a href="#" class="prev" style="visibility:hidden"><img border=0 src="http://madness.blob.core.windows.net/content/images/matchup-arrow-left.gif"></a>
+			<a href="#" class="next" style="visibility:hidden"><img border=0 src="http://madness.blob.core.windows.net/content/images/matchup-arrow-right.gif"></a>
+			<div style="display:none;"><a href="#" class="gofirst"></a></div>
+			<div class="debug"></div>
+		</div>
+        </div>
+    </div>
+    
+    <div data-role="page" id="rulespage" data-title="Brackets" class="clearfix" data-url="rules" data-name="rules">
+    
+    
+    	<div id="contentrules" data-role="content" class="center-wrapper" data-position="fixed" style="position:relative;top:0px;left:0px">
+			<h1 class="orb pageHeader">RULES</h1>
+            <div class="whiteContentBoxInner">
+            	<div id="leagueInfo"></div>
+            	<table id="roundrules">
+				</table>
+            </div>
+            <a target="_blank" href="http://mayhem.cbssports.com/splash/mayhem/spln/opc/free/rules" data-role="button" data-inline="true" class="button-blue">Terms of Use</a>
+
+		</div>
+    
+        	
+		
+	</div>
+	
+	<script>
+	$('[data-role=page]').live('pageshow', function (event, ui) {
+    try {
+        hash = location.hash;
+ 
+        if (hash) {
+			if(hash != "#bracket_zoomed"){
+				//console.log("GOOGLE ANALYTIC: "+hash);
+				_gaq.push(['_trackPageview', hash.substr(1)]);
+			}
+        }
+    } catch(err) {
+ 		console.log('analytic error:'+err);
+    }
+ 
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2433 @@
+
+@import url(http://fonts.googleapis.com/css?family=Orbitron:500,900);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body{color:black; font-family:'Droid Sans',helvetica,arial; font-size:16px}
+
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+.ui-body-c{text-shadow:none;}
+
+.ui-page { background: url(http://madness.blob.core.windows.net/content/images/hardwood.png); background-size:100%;  }
+#login.ui-page{ background: url(http://madness.blob.core.windows.net/content/images/login-bg.jpg); background-size:100%;  }
+
+.ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page {
+    /*top: 44px; */
+    min-height: auto;
+}
+
+.orb{font-family: 'Orbitron', sans-serif;}
+.droid{font-family: 'Droid Sans', helvetica, arial, sans-serif;}
+
+h1.pageHeader{
+	margin-top:10px;
+}
+
+.group:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}
+.ui-content {padding:0;margin-top:44px;}
+
+.ui-header,
+.ui-page-fullscreen .ui-header, 
+.ui-navbar {
+    overflow: visible;
+}
+
+#content {
+    clear: both;
+    margin-left: 1%;
+}
+
+
+/****** MENU 			 *******/
+.ui-navbar {
+    position: relative;
+    z-index: 200;
+}
+
+#header .menu {
+    z-index: 200;
+}
+
+#header .overlay {
+    background: rgba(0,0,0,0.75);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+
+
+#header .btn-menu.ui-btn {
+    z-index: 200;
+    position: absolute;
+    top: 5px;
+    right: 2%;
+
+    margin: 0;
+    padding: 0;
+
+    border-color: #333;
+    background-image: url(http://madness.blob.core.windows.net/content/images/button-bg-menu.jpg);
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #e8e8e8;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
+
+    width: 55px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#header .btn-menu .ui-btn-inner {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    width: 98%;
+    position: absolute;
+    top: 55px;
+    margin: 0 1%;
+    text-align: left;
+}
+
+ul.dropDownMenu {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    z-index: 5;
+}
+
+ul.dropDownMenu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 18px;
+    border-width: 0 16px 16px 16px;
+    border-style: solid;
+    border-color: #d1d1d1 transparent;
+    z-index: 10;
+}
+
+ul.dropDownMenu::after {
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: 19px;
+    border-width: 0 15px 15px 15px;
+    border-style: solid;
+    border-color: #0e2e4e transparent;
+    z-index: 20;
+}
+
+ul.dropDownMenu li {
+	height:30px;
+	line-height: 30px;
+	padding: 3px 0;
+	color:#FFF;
+	background-color:#0e2e4e;
+	display:block;
+	border: 1px solid #d1d1d1;
+	border-bottom: none;
+} 
+
+ul.dropDownMenu li .separator {
+    border-top: 2px dashed #d1d1d1;
+    margin: 15px 12px;
+    height: 15px;
+}
+
+ul.dropDownMenu li:last-child {
+	border-bottom:1px solid #d1d1d1;
+}
+
+ul.dropDownMenu a {
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+	color:#FFF;
+	font-weight: bold;
+}
+
+ul.dropDownMenu a:visited {
+    color: #fff;
+}
+
+ul.dropDownMenu a:hover, 
+ul.dropDownMenu a:active {
+	color: #a8a7a2;
+}
+
+
+
+
+.ui-body-c .ui-link-inherit {
+	color: #a8a7a2;
+}
+
+.ui-body-c .ui-link  {
+	color: #1a4d81;
+	font-weight: bold;
+}
+
+.ui-body-c .ui-link:visited {
+    /*color: #fff;*/
+}
+
+.ui-body-c .ui-link:hover {
+	color: #a8a7a2;
+}
+
+.ui-body-c .ui-link:active {
+	color: #a8a7a2;
+}
+
+
+/****** DIALOG BOX OVERRIDES *******/
+.ui-dialog .ui-header .ui-btn-icon-notext  { display:none;}
+.ui-dialog .ui-header .ui-title  { display:none;} 
+.ui-dialog.ui-overlay-a {
+    background: repeat scroll 0 0 rgba(0,0,0,.5);
+	
+
+    border: 1px solid #2A2A2A;
+    font-weight: normal;
+    text-shadow: 0 1px 0 #000000;
+}
+
+.ui-dialog.dialog-custom {
+
+	background: repeat scroll 0 0 rgba(0,0,0,.5);
+
+
+}
+
+.ui-dialog.ui-overlay-a {
+    
+}
+
+.ui-btn-inner.
+
+.inactive
+{
+    display: block !important;
+}
+
+
+.nav{margin:0; background: url(http://madness.blob.core.windows.net/content/images/top-nav-bar.jpg) repeat-x; background-size:auto 100%; height:44px;}
+.ui-bar-a {background:transparent; border:0;}
+
+
+#logo{
+	width:118px; 
+	height:18px; 
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	top: 13px;
+	margin-left:-59px;
+}
+
+#logo  .ui-btn .ui-btn-inner{
+	padding: 0;
+}
+
+#logo .ui-btn-inner img {
+	width: 100%;
+}
+
+h2.dialog-header,.ui-header h1.ui-title{
+	color:#1a4380;
+	font-size:2.2em !important;
+	text-align:center !important;
+	text-transform: uppercase !important;
+	font-family: 'Orbitron',sans-serif;
+	margin: 0;
+}
+
+p{
+	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+	font-size:1.4em;
+	/*font-weight:bold;*/
+}
+
+p.blueHeaderText{
+	color:#1a4d81;
+	font-size:20px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+p.dialogText,p.ui-simpledialog-subtitle{
+	text-align:center;
+	color:#07223d;
+	font-weight:normal;	
+	font-family: 'Droid Sans',Helvetica,sans-serif;
+	margin-bottom: 10px;
+}
+
+input.ui-input-text {
+	background: #fff;
+}
+
+.whiteContentBox{
+	background:#rgba(.9,.9,.9,.85)!important;
+	padding:20px;
+	border-top:solid 6px #FF510c;
+	border-bottom:solid 2px #d3d3d3;
+	text-align:left;
+	/*width:80%;*/
+}
+
+.whiteContentBoxNoData{
+	background-color:white;
+	padding:20px;
+	border-top:solid 6px #FF510c;
+	border-bottom:solid 2px #d3d3d3;
+	text-align:left;
+	/*width:80%;*/
+}
+
+#bracketOverviewPage .ui-simpledialog-container{
+	background:#ccc;
+	padding:20px;
+	border-top:solid 6px #FF510c !important;
+	border-bottom:solid 2px #d3d3d3 !important;
+	text-align:left;
+	max-width: 500px;
+	/*width:80%;*/
+}
+
+#bracketOverviewPage .ui-simpledialog-container .whiteContentBox {
+border: 0 !important;
+}
+
+
+.whiteContentBoxInner{
+	background-color:white;
+	padding:20px;
+	border-top:solid 6px #FF510c;
+	border-bottom:solid 2px #d3d3d3;
+	text-align:left;
+	width:80%;
+}
+
+.center-wrapper{
+	text-align: center;
+}
+
+.center-wrapper * {
+	margin: 0 auto;
+}
+
+.team_logo{
+	max-width:150px; 
+	max-height:200px; 
+}
+
+.grey_toggle_button{
+	display: inline;
+	list-style-type: none;
+}
+
+.grey_toggle_button.down{
+	display: inline;
+	list-style-type: none;
+	color: #369;
+}
+.details_block{
+	background: white;
+}
+
+
+.button-blue {
+   border-top: 1px solid #96d1f8;
+   background: #183459;
+   background: -webkit-gradient(linear, left top, left bottom, from(#1d5287), to(#183459));
+   background: -webkit-linear-gradient(top, #1d5287, #183459);
+   background: -moz-linear-gradient(top, #1d5287, #183459);
+   background: -ms-linear-gradient(top, #1d5287, #183459);
+   background: -o-linear-gradient(top, #1d5287, #183459);
+   padding: 0px 5px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #e5e5e5;
+   font-size: 1.4em;
+   font-family: 'Droid Sans', helvetica, arial, sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-top:10px;
+   }
+.button-blue:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button-blue:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+.fixedWidthButton {
+	width:200px;
+}
+
+.fullWidthButton {
+	width:80%;
+}
+
+input.ui-input-text.formTextInput{
+	text-align: left;
+	width: 70%;
+	height: 18px;
+	color: #666;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.formSubmit{
+	width:80%;
+}
+.ui-field-contain{
+	padding:0;
+}
+.ui-br{
+	border:0;
+}
+.ui-body-c #login-bg .ui-link{
+	font-size:11px;
+	text-decoration:none;
+	color:#004a8e;
+}
+.ui-shadow{
+	-webkit-box-shadow: none;
+	box-shadow:none;
+}
+.ui-btn{
+	background: url(http://madness.blob.core.windows.net/content/images/button-bg.jpg) repeat-x;
+	background-size: auto 100%;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #959289;
+	color:#e5e5e5;
+	text-shadow: 0px 1px 0px #0d2037;
+}
+.ui-btn-icon-left .ui-icon {
+	display:none;
+}
+
+.ui-btn-inner {
+	border:0;
+}
+
+
+/****** HOMEPAGE 			 *******/
+#BracketGames{
+	padding:0;
+	width:90%;
+	min-height:24px;
+	margin:10px auto;
+}
+#brackets {
+	list-style:none;
+	padding:0;
+	width: 90%;
+	margin: 0 auto;
+}
+#brackets li{
+	margin:0 0 12px 0;
+}
+.bracketLeagueTitle,
+.ui-body-c .ui-link.bracketLeagueTitle{
+	font-size:18px;
+	line-height:18px;
+	padding: 8px 20px;
+	background: #142f51;
+	color:#d1d1d1;
+	display:block;
+	border-bottom:solid 4px #ff4800;
+	text-decoration:none;
+	font-weight:500;
+	background:url('http://madness.blob.core.windows.net/content/images/home_arrow_grey.png') no-repeat 95% center #142f51;
+}
+.bracketTeamTitle,
+.ui-body-c .ui-link.bracketTeamTitle{
+	font-size:20px;
+	padding: 17px 20px;
+	background: #ffffff;
+	color:#1a4d81;
+	display:block;
+	text-decoration:none;
+	font-weight:bold;
+	background:url('http://madness.blob.core.windows.net/content/images/home_arrow_blue.png') no-repeat 95% center white;
+}
+
+.bracketTeamBottom{
+	height:2px;
+	background-color:#CCCCCC;
+}
+
+
+.bracketTeamTitle:active, .bracketTeamTitle.fake-active{
+	background-color:#ff4800!important;	
+}
+
+/*#mybracket:active{
+	background-color:#ff4800!important;	
+}
+*/
+
+.bracketLeagueTitle:active{
+	background-color:#ff4800!important;	
+}
+
+#logo a {
+	width:100%;
+	height:100%;
+	display:block;
+	background: url(http://madness.blob.core.windows.net/content/images/logo.png) no-repeat;  
+	background-size: 100%; 
+	border:0;
+	border-radius: 0;
+}
+.teamData{
+	width:100%;
+	background:white;
+}
+.teamData>div{
+	padding:0;
+	width:25%;
+}
+.teamData .rank, .teamData .correct, .teamData .points{
+	float:left;
+}
+.teamData .bestpoints{display:inline;p}
+.teamData .heading{
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding:5px 10px 0 0;
+	color:#aaa;
+	text-align:center;
+}
+.teamData .data{
+	font-weight:bold;
+	color:#1A4D81;
+	font-size:16px;
+	padding:6px 0;
+	text-align:center;
+	padding:5px 10px 0 0;
+}
+
+/****** BRACKET OVERVIEW PAGE *******/
+#autoFill{
+	background:url('http://madness.blob.core.windows.net/content/images/autofill.png') no-repeat;
+	background-size:100%;
+	width:44px;
+	height:44px;
+	margin:2px 5px 2px 5px;
+	float:left;
+	
+}
+
+#zoomOut,#regionLeft,#regionRight {
+	background:url('http://madness.blob.core.windows.net/content/images/zoom_icon.png') no-repeat;
+	background-size:100%;
+	width:44px;
+	height:44px;
+	margin:0px 5px 2px 5px;
+	float:left;
+}
+#RegionNav{
+	background:rgba(0,0,0,.25);
+	border-radius:9px;
+	height:44px;
+	display:block;
+	margin:2px 5px 2px 60px;
+	position: relative;
+	text-align:center;
+}
+#regionTitle{
+	padding:15px 0;
+	display: inline-block;
+	font-size:16px;
+	text-shadow:none;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#RegionNav .arrow-left {
+	cursor: pointer;
+	position: absolute;
+	left: 5px;
+	top: 0;
+}
+
+#RegionNav .arrow-right {
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+h1#leagueTitle{
+	font-size:16px;
+	font-weight:900;
+	color:#0e2e4e;
+	padding: 3px 0 0 0;
+	margin: 0;
+	line-height: 16px;
+	text-align:center;
+}
+h2#teamTitle{
+	font-size:13px;
+	font-weight:bold;
+	color:#0170a3;
+	padding: 0px;
+	margin: 0;
+	line-height: 13px;
+	text-align:center;
+}
+h3#tapInstructions{
+	font-size:12px;
+	color:#000;
+	padding: 0px;
+	margin: 0;
+	text-align:center;
+	line-height: 12px;
+}
+#bracketZoomedOut{
+	position:absolute;
+	top:50px;
+	bottom:54px; 
+	background:white;
+	width:90%;
+	margin: 0 2%;
+	padding: 3% 3% 0 3%;
+	border-top:4px solid #ff4800;
+	height:70%;
+}
+#bracketZoomedPage #bracketZoomedIn{
+	position:absolute;
+	top:60px;
+	bottom:inherit;
+	background:#141107;
+	/*
+	width:2290px;
+	height:2000px;
+	*/
+	width: 840px;
+	margin: 0;
+	padding: 10px;
+	border-top:0;
+	height:1000px;
+}
+
+#bracketZoomedPage #headerMeta {
+
+	margin-bottom:-44px;
+
+	margin-top:44px;
+
+}
+
+#BracketChampion
+	{
+	list-style:none;
+	position:absolute;
+	margin:0; padding:0;
+	width:40%;
+	height:8%;
+	}
+
+#BracketChampionship2
+	{
+	list-style:none;
+	position:absolute;
+	margin:0; padding:0;
+	width:40%;
+	height:8%;
+	}
+#bracketZoomedOut #BracketChampionship{
+	list-style:none;
+	position:relative;
+	margin:0; padding:0;
+	/*
+	width:40%;
+	height:8%;
+	*/
+}
+
+#zoomedOutButtons {
+	clear:both;
+	top:-13px;
+	position:relative;
+}
+
+
+#zoomedOutButtons a {
+	margin-top:2px;
+	margin-bottom:20px;
+}
+
+
+#bracketZoomedIn #BracketChampionship{
+	list-style:none;
+	margin:0; padding:0;
+	/*
+	width:40%;
+	height:8%;
+	*/
+}
+
+#BracketTiebreaker {
+	list-style:none;
+	position:absolute;
+	margin:0; padding:0;
+	width:40%;
+	height:8%;
+
+}
+#BracketChampionship li.round {
+	width: 100%;
+}
+
+#BracketChampionship2 ul.matchups li,
+#BracketChampionship ul.matchups li {
+	width: 162px;
+	min-height: 0;
+	margin-bottom: 40px;
+}
+
+#BracketChampionship ul.matchups li.game1 {
+	float: left;
+}	
+
+#BracketChampionship ul.matchups li.game2 {
+	float: right;
+}	
+
+#BracketChampionship li.round2 {
+	position: absolute;
+	top: 0;
+}
+
+
+#BracketChampionship li.round2 ul.matchups {
+	width: 365px;
+	margin: 0 auto;
+}
+
+#bracketZoomedIn #BracketChampionship li.round2 ul.matchups li{
+	margin-top:35px;
+}
+#BracketChampionship li.round2 ul.matchups li{
+	width: 365px;
+	margin-top: 30px;
+}
+
+#bracketZoomedIn #BracketChampionship li.round2 ul.matchups li {
+	margin-left:-10px;
+}
+
+#BracketChampionship li.round2 ul.matchups li.game1 a{
+	width: 162px;
+	display: inline-block;
+}	
+
+#BracketChampionship li.round2 ul.matchups li.game1 a:first-child{
+	margin-right: 5px;
+}	
+#BracketChampionship li.round3 {
+	list-style:none;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-family: 'Droid Sans', helvetica, arial, sans-serif;
+	font-size: 1.2em;
+}
+
+#BracketChampionship li.round3 ul.matchups li {
+	display: block;
+	text-decoration: none;
+	background: white url(http://madness.blob.core.windows.net/content/images/team-bg.jpg) repeat-x left top;
+	margin: 0 auto;
+	padding: 5px 0;
+	border: 0;
+	height: 34px;
+	line-height: 34px;
+	color: #0170A3;
+	font-weight: bold;
+	font-family: 'Droid Sans', helvetica, arial, sans-serif;
+	font-size: 1.2em;
+	border: 5px solid #959289;
+	width: 355px;
+}
+
+#BracketTiebreaker li { text-align: center; }
+
+#BracketChampionship2 li{
+	background:#d1d1d1;
+	height:80%;
+	width:26%;
+	float:left;
+}
+
+#BracketChampion li{
+	background:#ffffff;
+	height:80%;
+	width:26%;
+	float:left;
+}
+#BracketChampionship2 li.round1 li.game1,
+#BracketChampionship2 li.round1 li.game2{
+	height:60%;
+	position:relative;
+	top:10%;
+}
+#BracketChampionship2 li.round2 li.game1{
+	margin:0 10%;
+}
+
+
+
+
+
+#BracketChampionship2 li#north,
+#BracketChampionship2 li#south{
+	height:60%;
+	position:relative;
+	top:10%;
+}
+#BracketChampionship2 li#finals{
+	margin:0 10%;
+}
+
+#BracketChampion li#finalChampion{
+	margin:0 10%;
+}
+
+#BracketChampionship2,
+#BracketChampionship{
+	top:44%;
+	left:30%;
+}
+
+#BracketChampion{
+	top:52%;
+	left:30%;
+}
+
+#BracketTiebreaker{
+	left: 43%;
+	top: 66%;
+	width: 14%;
+	text-align:center;
+}
+#BracketTiebreaker li#Tiebreaker{
+	width:100%;
+	height:60%;
+	font-size:10px;
+}
+#BracketLabels{
+	position: absolute;
+	width: 99%;
+	height: 96%;
+}
+#BracketLabels div{
+	position:absolute;
+	color:#08233e;
+	font-size:12px;
+	font-weight:bold;
+	width: 30%;
+	text-align: center;
+}
+
+#bracketZoomedIn #BracketLabels div {
+    color: #fff;
+    font-size: 14px;
+}
+
+#SouthLabel{
+	top: 20%;
+	left: 0;
+}
+#BracketLabels #MidWestLabel {
+	top: 70%;
+	right:2%;
+	width:44%;
+}
+#WestLabel{
+	top: 70%;
+	left: 0;
+}
+#BracketLabels #EastLabel{
+	top: 20%;
+	right: 2%;
+	width:44%;
+}
+#BracketLabels #ChampionshipLabel{
+	top: 36%;
+	width: 94%;
+	text-align: center;
+	left: 0;
+}
+#BracketLabels #TitleLabel{
+	top: 0%;
+	width: 94%;
+	text-align: center;
+	left: 0;
+}
+#BracketLabels #TiebreakerLabel{
+	top: 60%;
+	width: 94%;
+	text-align: center;
+	left: 0;
+}
+#tapabbleArea{
+	position: absolute;
+	width: 94%;
+	height: 90%;
+	top: 3%;
+	left: 3%;
+}
+#tapabbleArea div		{ width:50%; height:50%; position:absolute;}
+#tapabbleArea .South		{ top:0; left:0; }
+#tapabbleArea .Midwest{ top:50%; right:0; }
+#tapabbleArea .West		{ top:50%; left:0; }
+#tapabbleArea .East{ top:0; right:0; }
+#tapabbleArea .Championship, #tapabbleArea .Tiebreaker { width: 44%; height: 24%; }
+#tapabbleArea .Championship { top: 38%; left:28%; }
+#tapabbleArea .Tiebreaker 	{ top: 55%; left: 43%; width: 14%; }
+
+/* zoomed out */
+
+#bracketZoomedOut .region{
+	margin:0;
+	padding:0;
+	width:50%;
+	float:left;
+	height:50%;
+	list-style:none;
+}
+
+#bracketZoomedOut .round1{
+	float:left;
+	width:20%;
+	height:100%;
+	margin:0 4% 4% 0;
+}
+#bracketZoomedOut .round2{
+	float:left;
+	width:20%;
+	height:100%;
+	margin:0% 4% 4% 0;
+}
+#bracketZoomedOut .round3{
+	float:left;
+	width:20%;
+	height:100%;
+	margin:0% 4% 4% 0;
+}
+#bracketZoomedOut .round4{
+	float:left;
+	width:20%;
+	height:25%;
+	height:100%;
+	margin:0% 4% 4% 0;
+}
+
+
+#bracketZoomedOut .round li{
+	list-style:none;
+	height:8%;
+	width:90%;
+	background:#d1d1d1;
+}
+
+
+#bracketZoomedOut .round li.picked, #bracketZoomedOut #BracketChampionship2 li.picked {
+	background:#337;
+}
+
+#bracketZoomedOut .round1 li{
+	/* background:#08233e; */
+}
+#bracketZoomedOut .round2 li{
+}
+#bracketZoomedOut .round3 li{
+}
+#bracketZoomedOut .round4 li{
+}
+
+#bracketZoomedOut .matchups{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	position:relative;
+}
+#bracketZoomedOut .round li {position:absolute;}
+#bracketZoomedOut .round1 .game2{ top:12%; }
+#bracketZoomedOut .round1 .game3{ top:24%; }
+#bracketZoomedOut .round1 .game4{ top:36%; }
+#bracketZoomedOut .round1 .game5{ top:48%; }
+#bracketZoomedOut .round1 .game6{ top:60%; }
+#bracketZoomedOut .round1 .game7{ top:72%; }
+#bracketZoomedOut .round1 .game8{ top:84%; }
+
+#bracketZoomedOut .round2 .game1{ top:6%; }
+#bracketZoomedOut .round2 .game2{ top:30%; }
+#bracketZoomedOut .round2 .game3{ top:54%; }
+#bracketZoomedOut .round2 .game4{ top:78%; }
+
+#bracketZoomedOut .round3 .game1{ top:18%; }
+#bracketZoomedOut .round3 .game2{ top:66%; }
+
+#bracketZoomedOut .round4 .game1{ top:42%; }
+
+#bracketZoomedOut .round li.redred, #bracketZoomedOut #BracketChampionship2 li.redred, #bracketZoomedOut #BracketChampion li.redred { background-color: #7f0f03; } 
+
+#bracketZoomedOut .round li.redgreen, #bracketZoomedOut #BracketChampionship2 li.redgreen { 
+	// background-image: linear-gradient(top, #7f0f03 0%, #00753a 100%); 
+	// background-image: -webkit-linear-gradient(top, #7f0f03 0%, #00753a 100%); 
+	background: #7f0f03; /* Old browsers */
+	background: -moz-linear-gradient(top, #7f0f03 0%, #7f0f03 50%, #00753a 51%, #00753a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7f0f03), color-stop(50%,#7f0f03), color-stop(51%,#00753a), color-stop(100%,#00753a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* IE10+ */
+	background: linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f0f03', endColorstr='#00753a',GradientType=0 ); /* IE6-9 */
+}
+#bracketZoomedOut .round li.greenred, #bracketZoomedOut #BracketChampionship2 li.greenred { 
+	// background-image: linear-gradient(top, #00753a 0%, #7f0f03 100%); 
+	// background-image: -webkit-linear-gradient(top, #00753a 0%, #7f0f03 100%); 
+	background: #00753a; /* Old browsers */
+	background: -moz-linear-gradient(top, #00753a 0%, #00753a 50%, #7f0f03 51%, #7f0f03 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00753a), color-stop(50%,#00753a), color-stop(51%,#7f0f03), color-stop(100%,#7f0f03)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* IE10+ */
+	background: linear-gradient(top, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00753a', endColorstr='#7f0f03',GradientType=0 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.greengreen, #bracketZoomedOut #BracketChampionship2 li.greengreen, #bracketZoomedOut #BracketChampion li.greengreen { background-color:#00753a; }
+
+#bracketZoomedOut .round li.bluered, #bracketZoomedOut #BracketChampionship2 li.bluered {
+	background: #333377; /* Old browsers */
+	background: -moz-linear-gradient(top, #333377 0%, #333377 50%, #7f0f03 51%, #7f0f03 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333377), color-stop(50%,#333377), color-stop(51%,#7f0f03), color-stop(100%,#7f0f03)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* IE10+ */
+	background: linear-gradient(top, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333377', endColorstr='#7f0f03',GradientType=0 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.bluegreen, #bracketZoomedOut #BracketChampionship2 li.bluegreen {
+	background: #333377; /* Old browsers */
+	background: -moz-linear-gradient(top, #333377 0%, #333377 50%, #00753a 51%, #00753a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333377), color-stop(50%,#333377), color-stop(51%,#00753a), color-stop(100%,#00753a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* IE10+ */
+	background: linear-gradient(top, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333377', endColorstr='#00753a',GradientType=0 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.redblue, #bracketZoomedOut #BracketChampionship2 li.redblue {
+	background: #333377; /* Old browsers */
+	background: -moz-linear-gradient(top, #7f0f03 0%, #7f0f03 50%, #333377 51%, #333377 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7f0f03), color-stop(50%,#7f0f03), color-stop(51%,#333377), color-stop(100%,#333377)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* IE10+ */
+	background: linear-gradient(top, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f0f03', endColorstr='#333377',GradientType=0 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.greenblue, #bracketZoomedOut #BracketChampionship2 li.greenblue {
+	background: #333377; /* Old browsers */
+	background: -moz-linear-gradient(top, #00753a 0%, #00753a 50%, #333377 51%, #333377 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00753a), color-stop(50%,#00753a), color-stop(51%,#333377), color-stop(100%,#333377)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* IE10+ */
+	background: linear-gradient(top, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00753a', endColorstr='#333377',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+/* HORIZONTAL GRADIENTS */
+#bracketZoomedOut .round li.horizredred, #bracketZoomedOut #BracketChampionship2 li.horizredred { background-color: #7f0f03; } 
+
+#bracketZoomedOut .round li.horizredgreen, #bracketZoomedOut #BracketChampionship2 li.horizredgreen { 
+	background: #7f0f03; /* Old browsers */
+	background: -moz-linear-gradient(left, #7f0f03 0%, #7f0f03 50%, #00753a 51%, #00753a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#7f0f03), color-stop(50%,#7f0f03), color-stop(51%,#00753a), color-stop(100%,#00753a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* IE10+ */
+	background: linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#00753a 51%,#00753a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f0f03', endColorstr='#00753a',GradientType=1 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.horizgreenred, #bracketZoomedOut #BracketChampionship2 li.horizgreenred { 
+	background: #00753a; /* Old browsers */
+	background: -moz-linear-gradient(left, #00753a 0%, #00753a 50%, #7f0f03 51%, #7f0f03 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#00753a), color-stop(50%,#00753a), color-stop(51%,#7f0f03), color-stop(100%,#7f0f03)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* IE10+ */
+	background: linear-gradient(left, #00753a 0%,#00753a 50%,#7f0f03 51%,#7f0f03 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00753a', endColorstr='#7f0f03',GradientType=1 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.horizgreengreen, #bracketZoomedOut #BracketChampionship2 li.horizgreengreen { background-color:#00753a; }
+
+#bracketZoomedOut .round li.horizbluered, #bracketZoomedOut #BracketChampionship2 li.horizbluered {
+	background: #333377; /* Old browsers */
+	background: -moz-linear-gradient(left, #333377 0%, #333377 50%, #7f0f03 51%, #7f0f03 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333377), color-stop(50%,#333377), color-stop(51%,#7f0f03), color-stop(100%,#7f0f03)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* IE10+ */
+	background: linear-gradient(left, #333377 0%,#333377 50%,#7f0f03 51%,#7f0f03 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333377', endColorstr='#7f0f03',GradientType=1 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.horizbluegreen, #bracketZoomedOut #BracketChampionship2 li.horizbluegreen {
+	background: #333377; /* Old browsers */
+	background: -moz-linear-gradient(left, #333377 0%, #333377 50%, #00753a 51%, #00753a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333377), color-stop(50%,#333377), color-stop(51%,#00753a), color-stop(100%,#00753a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* IE10+ */
+	background: linear-gradient(left, #333377 0%,#333377 50%,#00753a 51%,#00753a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333377', endColorstr='#00753a',GradientType=1 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.horizredblue, #bracketZoomedOut #BracketChampionship2 li.horizredblue {
+	background: #7f0f03; /* Old browsers */
+	background: -moz-linear-gradient(left, #7f0f03 0%, #7f0f03 50%, #333377 51%, #333377 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#7f0f03), color-stop(50%,#7f0f03), color-stop(51%,#333377), color-stop(100%,#333377)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* IE10+ */
+	background: linear-gradient(left, #7f0f03 0%,#7f0f03 50%,#333377 51%,#333377 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f0f03', endColorstr='#333377',GradientType=1 ); /* IE6-9 */
+}
+
+#bracketZoomedOut .round li.horizgreenblue, #bracketZoomedOut #BracketChampionship2 li.horizgreenblue {
+	background: #00753a; /* Old browsers */
+	background: -moz-linear-gradient(left, #00753a 0%, #00753a 50%, #333377 51%, #333377 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#00753a), color-stop(50%,#00753a), color-stop(51%,#333377), color-stop(100%,#333377)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* IE10+ */
+	background: linear-gradient(left, #00753a 0%,#00753a 50%,#333377 51%,#333377 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00753a', endColorstr='#333377',GradientType=1 ); /* IE6-9 */
+}
+
+
+
+
+
+
+#BracketSouth {
+	position:relative;
+}
+#BracketSouth .round4, #BracketWest .round4{
+	margin-right:0;
+}
+#BracketEast .round1, #BracketMidwest .round1{
+	margin-right:0;
+}
+
+#BracketEast .round, #BracketMidwest .round{
+	float:right;
+}
+
+#BracketMidwest {
+	position:relative;
+}
+
+#BracketWest {
+	position:relative;
+}
+
+#BracketEast {
+	position:relative;
+}
+
+#bracketSubmit {
+	float:left;
+}
+
+#bracketClear {
+	float:right;
+}
+
+
+/* zoomed in */
+#bracketZoomedIn .region{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#bracketZoomedIn .round {
+	float:left;
+	width:165px;
+	margin-right: 40px;
+}
+
+#bracketZoomedIn #BracketMidwest .round ,
+#bracketZoomedIn #BracketEast .round {
+    float: right;
+}
+
+#bracketZoomedIn .round > li {
+	list-style:none;
+	width:185px;
+	background:#d1d1d1;
+}
+
+#bracketZoomedIn .round  li {
+	list-style:none;
+}
+
+#bracketZoomedIn .round2 li{
+}
+#bracketZoomedIn .round3 li{
+}
+#bracketZoomedIn .round4 li{
+}
+
+#bracketZoomedIn .matchups{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	position:relative;
+	z-index: 5;
+}
+
+#bracketZoomedIn .matchups li {
+    margin-bottom: 10%;
+    min-height: 103px;
+}
+
+#bracketZoomedIn .champion .round1 li:after {
+    content: "";
+    position: absolute;
+    left: 162px;
+    border-style: solid;
+    border-color: #959289 ;
+    width: 45px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .champion .round1 .game1:after {
+    border-width: 5px 5px 5px 0;
+    top: 24px;
+    height: 45px;
+}
+
+#bracketZoomedIn .champion .round2 .game1:after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 0 0 0;
+    width: 421px;
+    height: 238px;
+    z-index: -1;
+	left:-40px;
+}
+
+#bracketZoomedIn .champion .round1 .game2:after {
+	border-width: 5px 0 5px 5px;
+	top: 24px;
+	left: 628px;
+	height: 45px;
+}
+
+#bracketZoomedIn .left .round1 li:after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    border-style: solid;
+    border-color: #959289 ;
+    width: 45px;
+    z-index: 20;
+}
+
+
+
+#bracketZoomedIn .left .round1 .game1:after {
+    border-width: 5px 5px 0 0;
+    top: 49px;
+    height: 60px;
+}
+
+#bracketZoomedIn .left .round1 .game2:after {
+    border-width: 0 5px 5px 0;
+    top: 114px;
+    height: 54px;
+}
+
+#bracketZoomedIn .left .round1 .game3:after {
+    border-width: 5px 5px 0 0;
+    top: 287px;
+    height: 60px;
+}
+
+#bracketZoomedIn .left .round1 .game4:after {
+    border-width: 0 5px 5px 0;
+    top: 351px;
+    height: 55px;
+}
+
+#bracketZoomedIn .left .round1 .game5:after {
+    border-width: 5px 5px 0 0;
+    top: 525px;
+    height: 60px;
+}
+
+#bracketZoomedIn .left .round1 .game6:after {
+    border-width: 0 5px 5px 0;
+    top: 589px;
+    height: 55px;
+}
+
+#bracketZoomedIn .left .round1 .game7:after {
+    border-width: 5px 5px 0 0;
+    top: 763px;
+    height: 60px;
+}
+
+#bracketZoomedIn .left .round1 .game8:after {
+    border-width: 0 5px 5px 0;
+    top: 827px;
+    height: 55px;
+}
+
+#bracketZoomedIn .round2 .game1{ margin-top: 60px; }
+#bracketZoomedIn .round2 .game2{ margin-top: 140px; }
+#bracketZoomedIn .round2 .game3{ margin-top: 135px; }
+#bracketZoomedIn .round2 .game4{ margin-top: 140px; }
+
+
+#bracketZoomedIn .left .round2 .game1:after {
+    content: "";
+    position: absolute;
+    top: 49px;
+    right: -23px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 5px 5px 0;
+    width: 45px;
+    height: 238px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .left .round2 .game3:after {
+    content: "";
+    position: absolute;
+    top: 530px;
+    right: -23px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 5px 5px 0;
+    width: 45px;
+    height: 238px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .left .round2 li:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    border-style: solid;
+    border-color: #959289 ;
+    border-width: 5px 0 0 0;
+    z-index: 20;
+    width: 30px;
+}
+
+#bracketZoomedIn .left .round2 .game1:before { top: 49px; }
+#bracketZoomedIn .left .round2 .game2:before { top: 292px; }
+#bracketZoomedIn .left .round2 .game3:before { top: 530px; }
+#bracketZoomedIn .left .round2 .game4:before { top: 773px; }
+
+#bracketZoomedIn .round3 .game1{ margin-top: 185px; }
+#bracketZoomedIn .round3 .game2{ margin-top: 375px; }
+
+#bracketZoomedIn .left .round3 li:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    border-style: solid;
+    border-color: #959289 ;
+    border-width: 5px 0 0 0;
+    z-index: 20;
+    width: 30px;
+}
+
+#bracketZoomedIn .left .round3 .game1:before { top: 49px; }
+#bracketZoomedIn .left .round3 .game2:before { top: 527px; }
+
+#bracketZoomedIn .left .round3 .game1:after {
+    content: "";
+    position: absolute;
+    top: 49px;
+    right: -22px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 5px 5px 0;
+    width: 45px;
+    height: 473px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .round4 .game1{ margin-top: 430px; }
+
+#bracketZoomedIn .left .round4 li:before {
+    content: "";
+    position: absolute;
+    top: 49px;
+    left: -20px;
+    border-style: solid;
+    border-color: #959289 ;
+    border-width: 5px 0 0 0;
+    z-index: 20;
+    width: 30px;
+}
+
+
+
+
+
+
+
+
+#bracketZoomedIn .right .round1 li:after {
+    content: "";
+    position: absolute;
+    left: -25px;
+    border-style: solid;
+    border-color: #959289 ;
+    width: 45px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .right .round1 .game1:after {
+    border-width: 5px 0 0 5px;
+    top: 49px;
+    height: 60px;
+}
+
+#bracketZoomedIn .right .round1 .game2:after {
+    border-width: 0 0px 5px 5px;
+    top: 114px;
+    height: 54px;
+}
+
+#bracketZoomedIn .right .round1 .game3:after {
+    border-width: 5px 0 0 5px;
+    top: 287px;
+    height: 60px;
+}
+
+#bracketZoomedIn .right .round1 .game4:after {
+    border-width: 0 0px 5px 5px;
+    top: 351px;
+    height: 55px;
+}
+
+#bracketZoomedIn .right .round1 .game5:after {
+    border-width: 5px 0 0 5px;
+    top: 525px;
+    height: 60px;
+}
+
+#bracketZoomedIn .right .round1 .game6:after {
+    border-width: 0 0px 5px 5px;
+    top: 589px;
+    height: 55px;
+}
+
+#bracketZoomedIn .right .round1 .game7:after {
+    border-width: 5px 0 0 5px;
+    top: 763px;
+    height: 60px;
+}
+
+#bracketZoomedIn .right .round1 .game8:after {
+    border-width: 0 0px 5px 5px;
+    top: 827px;
+    height: 55px;
+}
+
+#bracketZoomedIn .right .round2 .game1:after {
+    content: "";
+    position: absolute;
+    top: 49px;
+    left: -23px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 0 5px 5px;
+    width: 45px;
+    height: 238px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .right .round2 .game3:after {
+    content: "";
+    position: absolute;
+    top: 530px;
+    left: -23px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 0 5px 5px;
+    width: 45px;
+    height: 238px;
+    z-index: 20;
+}
+
+#bracketZoomedIn .right .round2 li:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    border-style: solid;
+    border-color: #959289 ;
+    border-width: 5px 0 0 0;
+    z-index: 20;
+    width: 30px;
+}
+
+#bracketZoomedIn .right .round2 .game1:before { top: 49px; }
+#bracketZoomedIn .right .round2 .game2:before { top: 292px; }
+#bracketZoomedIn .right .round2 .game3:before { top: 530px; }
+#bracketZoomedIn .right .round2 .game4:before { top: 773px; }
+
+
+#bracketZoomedIn .right .round3 li:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    border-style: solid;
+    border-color: #959289 ;
+    border-width: 5px 0 0 0;
+    z-index: 20;
+    width: 30px;
+}
+
+#bracketZoomedIn .right .round3 .game1:before { top: 49px; }
+#bracketZoomedIn .right .round3 .game2:before { top: 527px; }
+
+#bracketZoomedIn .right .round3 .game1:after {
+    content: "";
+    position: absolute;
+    top: 49px;
+    left: -22px;
+    border-style: solid;
+    border-color: #959289;
+    border-width: 5px 0 5px 5px;
+    width: 45px;
+    height: 473px;
+    z-index: 20;
+}
+
+
+#bracketZoomedIn .right .round4 li:before {
+    content: "";
+    position: absolute;
+    top: 49px;
+    right: -20px;
+    border-style: solid;
+    border-color: #959289 ;
+    border-width: 5px 0 0 0;
+    z-index: 20;
+    width: 30px;
+}
+
+
+
+/********LOGIN SCREEN********/
+#login-bg{
+	background:rgba(255,255,255,.6);
+	margin: 70px 7% 0px 7%;
+	padding: 10px 4%;
+	position: absolute;
+	bottom: 10px;
+	width: 78%;
+	line-height: 12px;
+}
+#login-form{
+	margin-bottom:10px;
+}
+#loginTitle{
+	width:86%;
+	margin:12px 0 0 0;
+}
+
+#rememberCheckbox{
+	margin-top:15px;
+	margin-bottom:15px;
+	color:#1a4d81;
+	font-size:14px;
+	font-weight:bold;
+}
+
+/*******MATCHUP SCREEN********/
+.matchup_tab_button{
+	height:40px;
+	font-size:14px;
+	text-align:center;
+	vertical-align:middle;
+	line-height:40px;
+	background-image:url('http://madness.blob.core.windows.net/content/images/matchup_stats_btn_sel.png');
+}
+
+.analysis_logo {
+	width: 30%;
+	text-align: center;
+}
+
+.analysis_logo_left {
+	float:left;
+}
+
+.analysis_logo_right {
+	float:right; 
+}
+
+
+
+.analysis_row {
+	clear:both;
+	margin: 10px 0 15px;
+	overflow: hidden;
+	height:80px;
+}
+.analysis_hrule {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border-bottom: 3px solid #777;
+}
+
+.analysis_slider {
+    float: left;
+	width:40%;
+	height: 100%;
+	position: relative;
+}	
+
+.analysis_slider_track {
+	background: #ddd;
+	border: 1px solid #b3b3b3;
+	box-shadow: 1px 1px 3px #b3b3b3;
+	position: relative;
+	width: 90%;
+	min-width: 45px;
+	height: 9px;
+	top: 50%;
+	margin: 0 auto;
+}
+
+.analysis_slider_knob {
+	width:27px;
+	height:28px;
+	background: url(http://madness.blob.core.windows.net/content/images/analysis-knob.png) no-repeat;
+	position: relative;
+	margin: -7px auto 0;
+}	
+
+#offensevsdefensecommentaryheader {
+	color: #676767;
+	font-weight: bold;
+}
+
+#defensevsoffensecommentaryheader {
+	color: #676767;
+	font-weight: bold;
+}
+
+.team_logo_text{
+	text-align:center;
+}
+
+.team_logo_subtext{
+	text-align:center;
+	position:relative;
+	top:-16px;
+}
+
+.faded_grey_text{
+	color:#8e8c7f;
+	font-size:14px;
+}
+
+.light_blue_text{
+	color:#006ca0;
+	font-size:14px;
+}
+
+.matchup_team_logo{
+	position:relative;
+	top:10px;
+	left:4px
+}
+
+.details_matchup_team_logo{
+	position:relative;
+	left:80px
+}
+
+.percentage_picked_text{
+	position:absolute;
+	top:-10px;
+	left:170px;
+	font-size:28px;
+}
+
+.picked_text{
+	position:absolute;
+	top:37px;
+	left:170px;
+	font-size:12px;
+}
+
+.teams_game_date{
+	position:relative;
+	left:10px;
+	right:10px;
+	top:20px;
+	text-align:center;
+}
+
+.teams_game_location{
+	position:relative;
+	left:10px;
+	right:10px;
+	top:0px;
+	text-align:center;
+}
+
+.details_block{
+	position:relative;
+	top:100px;
+	left:20px;
+}
+
+.sub_header_bar{
+	position:relative;
+	margin:auto;
+	height:70px;
+	text-align:center;
+}
+
+#subheader_subtext{
+	-webkit-margin-before:0;
+}
+.orb.pageHeader{
+	-webkit-margin-after: .2em;
+}
+
+.matchup_team_box{
+	position:relative;
+	top:10px;
+	left:-20px;
+	margin:auto;
+	height:210px;
+}
+
+#snapshot{
+	margin: 10px auto 0;
+	overflow: hidden;
+	text-align: center;
+	border-top: 5px solid #ff4800;
+	border-bottom: 2px solid #d3d3d3;
+	background: #fff;
+	color: #3b3b3b;
+	font-weight: bold;
+	text-transform: uppercase;
+	width:95%;
+}
+
+#matchup_analysis_page h1 {
+	font-weight: 900;
+	font-size: 16px;
+	color: #0e2e4e;
+	text-transform: uppercase;
+	margin-top:10px;
+}
+
+#snapshot .matchup {
+	margin-top:10px;
+	clear: both;
+	padding-bottom: 15px;
+}
+
+#snapshot .vs {
+	margin-top: 60px;
+}
+
+#snapshot .details {
+	clear: both;
+	padding-bottom: 15px;
+	padding-top: 20px;
+}
+
+#snapshot .location {
+	color: #0371a6;
+	font-size: 14px;
+}
+
+
+#snapshot .matchup .team1 {
+	float: left;
+	width: 40%;
+	font-size:18px;
+}
+
+#snapshot .matchup .team2 {
+	float: right;
+	width: 40%;
+	font-size:18px;
+}
+
+#snapshot .matchup .stats {
+	color:#919488;
+	font-size:14px;
+}
+
+#snapshot .matchup .vs {
+	float: left;
+	width: 20%;
+}
+
+.matchup_tab_bar{
+	margin: 20px auto 0;
+	overflow: hidden;
+}
+
+.matchup_details_block_container{
+	width:100%;
+    background: #dfdfdf;
+}
+
+.matchup_analysis_block {
+    padding: 15px 10px;
+}
+
+.matchup_details_block{
+}
+
+.matchup_central_column_width{
+	width:100%;
+}
+
+.matchup_analysis_title { 
+    font-family: 'Orbitron', sans-serif;
+    color: #959289;
+    text-transform: uppercase;
+}
+
+.matchup_details_analysis_text{
+	position:relative;
+	top:20px;
+	margin:10px;
+	font-size:12px;
+}
+
+#team_column_left{
+	margin:auto;
+	position:absolute;
+	top:15px;
+	left:15px;
+}
+
+#vs_column_middle{
+	position:absolute;
+	width:280px;
+	top:40px;
+	text-align:center;
+}
+
+#team_column_right{
+	margin:auto;
+	position:absolute;
+	top:15px;
+	right:15px;
+}
+
+#teams_bottom_row{
+	margin:auto;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+
+#analysis_togglebutton{
+    float: left;
+	border: 1px solid #545454;
+	border-left: 0;
+	border-right: 0;
+	width:50%;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+
+#team_stats{
+    float: right;
+	border: 1px solid #545454;
+	border-right: 0;
+	width: 50%;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+#bracketZoomedIn ul.matchups li {
+    background: #959289;
+    height: auto;
+}
+
+#bracketZoomedIn ul.matchups li a {
+    display: block;
+    text-decoration: none;
+    background: white url(http://madness.blob.core.windows.net/content/images/team-bg.jpg) repeat-x left top;
+    margin: 0;
+    padding: 5px 9px;
+    border: 0;
+    height: 34px;
+    line-height: 34px;
+    color: #0170a3;
+    font-weight: bold;
+	font-family: 'Droid Sans', helvetica, arial, sans-serif;
+	font-size:1.2em;
+
+}
+
+
+#bracketZoomedIn ul.matchups li a:first-child {
+    border-top: 5px solid #959289;
+    margin: 0 0 5px 0;
+}
+
+#bracketZoomedIn ul.matchups li a:first-child.played {
+    border-top: 5px solid #ff4800;
+}
+
+#bracketZoomedIn ul.matchups li a:last-child {
+    border-bottom: 5px solid #959289;
+}
+
+#bracketZoomedIn ul.matchups li a:last-child.played {
+    border-bottom: 5px solid #ff4800;
+}
+
+#bracketZoomedIn ul.matchups li a.right {
+    color: #fff;
+    background: #00753a;
+}
+
+#bracketZoomedIn ul.matchups li a.wrong {
+    color: #fff;
+    background: #7f0f03;
+    text-decoration:line-through;
+}
+
+
+
+#bracketZoomedIn ul.matchups li a.eliminated {
+    text-decoration: line-through;
+    color: #cfcdc0;
+}
+
+/* ================================================================= matchup popup === */
+#matchupPopupPage .center-wrapper {
+    background: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 30% 0 0 0;
+    padding: 0;
+    position: relative;
+    max-width: none;
+    width: auto;
+}
+
+#matchupPopupPage.ui-dialog.dialog-custom {
+    background: rgba(0,0,0,0.75);
+}
+
+#matchupPopupPage .matchup {
+    display: block;
+    background: #215890 url(http://madness.blob.core.windows.net/content/images/button-bg.jpg) repeat-x center center;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 2px solid #959289;
+    text-decoration: none;
+    color: #e5e5e5;
+    width: 75%;
+    visibility:hidden;
+}
+
+#matchupPopupPage .team1 ,
+#matchupPopupPage .team2 {
+    display: block;
+    text-decoration: none;
+    background: white url(http://madness.blob.core.windows.net/content/images/team-bg.jpg) repeat-x center center;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border: 0;
+    height: 34px;
+    line-height: 34px;
+    color: #0170a3;
+    font-weight: bold; 
+    width: 75%;
+    border-bottom: 5px solid #959289;
+}
+
+#matchupPopupPage .team1 {
+    margin-top: 5px;
+    border-top: 5px solid #959289;
+}
+
+#matchupPopupPage .team1.picked ,
+#matchupPopupPage .team2.picked ,
+#matchupPopupPage .team1:active ,
+#matchupPopupPage .team2:active {
+    background: #ff4900;
+    color: #fff;
+}
+
+#matchupPopupPage .prev {
+    display: block;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    background: #d3d3d3;
+    padding: 35px 0;
+    width: 14%;
+}
+
+#matchupPopupPage .next {
+    display: block;
+    position: absolute;
+    top: 49px;
+    right: 0;
+    background: #d3d3d3;
+    padding: 35px 0;
+    width: 14%;
+}
+
+/* matchup SINGLE PICKER */
+
+
+#matchupPopupPageSingle .center-wrapper {
+    background: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 30% 0 0 0;
+    padding: 0;
+    position: relative;
+    max-width: none;
+    width: auto;
+}
+
+#matchupPopupPageSingle.ui-dialog.dialog-custom {
+    background: rgba(0,0,0,0.75);
+}
+
+#matchupPopupPageSingle .matchup {
+    display: block;
+    background: #215890 url(http://madness.blob.core.windows.net/content/images/button-bg.jpg) repeat-x center center;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 2px solid #959289;
+    text-decoration: none;
+    color: #e5e5e5;
+    width: 75%;
+}
+
+#matchupPopupPageSingle .team1 ,
+#matchupPopupPageSingle .team2 {
+    display: block;
+    text-decoration: none;
+    background: white url(http://madness.blob.core.windows.net/content/images/team-bg.jpg) repeat-x center center;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border: 0;
+    height: 34px;
+    line-height: 34px;
+    color: #0170a3;
+    font-weight: bold; 
+    width: 75%;
+    border-bottom: 5px solid #959289;
+}
+
+#matchupPopupPageSingle .team1 {
+    margin-top: 5px;
+    border-top: 5px solid #959289;
+}
+
+#matchupPopupPageSingle .team1.picked ,
+#matchupPopupPageSingle .team2.picked ,
+#matchupPopupPageSingle .team1:active ,
+#matchupPopupPageSingle .team2:active {
+    background: #ff4900;
+    color: #fff;
+}
+
+#matchupPopupPageSingle .prev {
+    display: block;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    background: #d3d3d3;
+    padding: 35px 0;
+    width: 14%;
+}
+
+#matchupPopupPageSingle .next {
+    display: block;
+    position: absolute;
+    top: 49px;
+    right: 0;
+    background: #d3d3d3;
+    padding: 35px 0;
+    width: 14%;
+}
+
+#bracketZoomedIn #BracketLabels ,
+#bracketZoomedIn .region,
+#bracketZoomedIn #BracketTiebreaker,
+#bracketZoomedIn #BracketChampionship {
+    display: none;
+}
+
+
+.standingsSorter{
+	color:white!important;
+	text-decoration:none;	
+}
+
+
+table#roundrules			{ width: 90%; margin: 15px auto; border-collapse: collapse; }
+table#roundrules th		{ padding: 15px 0 3px 15px; text-align: center; font-size: 16px; font-weight: normal; color: #fff; background: navy; border-bottom: 3px solid #ff4800; }
+table#roundrules td		{ padding: 10px 15px; font-size: 18px; font-weight: normal; color: #1a4d81; background: white; border-bottom: 1px solid #959289; }
+table#roundrules.post td		{ padding: 10px 15px; font-size: 18px; font-weight: normal; color: #1a4d81; background: white; border: 1px solid #959289; }
+=======
+
+
+/*additions by monica*/
+#subheader_bar p	{ margin: 0; padding: 0; }
+
+/*
+#mybracket			{ display:block; text-decoration:none; margin: 15px 3%; padding: 15px; font-size: 26px; color: #1a4d81; background: #fff url(http://madness.blob.core.windows.net/content/images/home_arrow_blue.png) 98% center no-repeat; border-top: 3px solid #ff4800; }
+*/
+
+#mybracket			{ display:block; text-decoration:none; margin: 15px 3%; padding: 0px; font-size: 26px; color: #1a4d81; background: #fff; border-top: 3px solid #ff4800; }
+
+.userStandings {
+width: 100%;
+background: white;
+}
+
+.userStandings > div {
+padding: 0;
+width: 25%;
+}
+
+.bracketChallenge > div {
+padding: 0;
+width: 33%;
+}
+.bracketChallenge > div:last-child {
+padding: 0;
+width: 34%;
+}
+
+.userStandings .rank, .userStandings .correct, .userStandings .points, .userStandings .best {
+float: left;
+}
+
+.userStandings .heading{
+color:#999;
+font-size:14px;
+font-weight:bold;
+text-align:center;
+border-top: 1px solid #CCC;
+border-bottom: 1px solid #CCC;
+padding: 5px 10px 0 0;
+
+}
+.userStandings .data{
+font-size:14px;
+font-weight:bold;
+text-align:center;
+padding: 5px 10px
+}
+
+table#bracketsdata			{ width: 94%; margin: 15px 3%; border-collapse: collapse; }
+table#bracketsdata th		{ padding: 15px 0 3px 15px; text-align: left; font-size: 16px; font-weight: normal; color: #fff; background: navy; border-bottom: 3px solid #ff4800; }
+table#bracketsdata td		{ padding: 10px 15px; font-size: 18px; font-weight: normal; color: #1a4d81; background: white; border-bottom: 1px solid #959289; }
+table#bracketsdata.post td		{ padding: 10px 15px; font-size: 18px; font-weight: normal; color: #1a4d81; background: white; border: 1px solid #959289; }
+
+a.mybracket-single {
+	text-decoration: none;
+	color: #1A4D81;
+	font-weight: bold;
+	font-size: 20px;
+	background: url('http://madness.blob.core.windows.net/content/images/home_arrow_blue.png') no-repeat 95% center white;
+	display: block;
+	padding: 17px 20px;
+}
+
+.mybracket-single:active, .mybracket-single.fake-active{
+	background-color:#ff4800!important;	
+}
+
+.mybracket-single:active{
+	background-color:#ff4800!important;	
+}
+
+
+
+/* Matchup Popup Page */
+#matchupPopupPage ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#matchupPopupPage .matchup {
+	// width: 95%;
+}
+
+#matchupPopupPage .team1, #matchupPopupPage .team2 {
+	width: 95%;
+}
+
+#matchupPopupPage .scroller-container {
+	width: 75%;
+	overflow: hidden;
+}
+
+#matchupPopupPage.ui-dialog.dialog-custom {
+	height: 100%;
+}
+
+/* Matchup Popup Page  SINGLE*/
+#matchupPopupPageSingle ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#matchupPopupPageSingle .matchup {
+	// width: 95%;
+	visibility:hidden;
+}
+
+#matchupPopupPageSingle .team1, #matchupPopupPageSingle .team2 {
+	width: 95%;
+}
+
+#matchupPopupPageSingle .scroller-container {
+	width: 75%;
+	overflow: hidden;
+}
+
+#matchupPopupPageSingle.ui-dialog.dialog-custom {
+	height: 100%;
+}
+
+.debug {
+	width: 70%;
+	background: transparent;
+	color: lightGrey;
+	text-align: center;
+	font-weight: bold;
+	color:#fff;
+	padding-top:5px;
+	clear:both;
+}
+
+/* ================================================================= stats === */
+#details_block_stats table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0;
+}
+
+#details_block_stats th,
+#details_block_stats td {
+    width: 33%;
+    text-align: center;
+    padding: 5px;
+}
+
+#details_block_stats th {
+    color: #07223D;
+}
+
+#details_block_stats td {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #959289;
+    border-bottom: 0;
+}
+
+#details_block_stats td:first-child ,
+#details_block_stats td:last-child {
+    color: #00488d;
+    border-left: 0;
+    border-right: 0;
+}
+
+#details_block_stats tr:last-child td {
+    border-bottom: 2px solid #959289;
+}
+
+.ui-dialog#matchupPopupPage {
+      background-color: rgba(0,0,0,0.7); !important;
+}
+
+.ui-dialog#matchupPopupPageSingle {
+      background-color: rgba(0,0,0,0.7); !important;
+}
+
+.opaque {
+	opacity:1;
+}5%;
+	visibility:hidden;
+}
+
+#matchupPopupPageSingle .team1, #matchupPopupPageSingle .team2 {
+	width: 95%;
+}
+
+#matchupPopupPageSingle .scroller-container {
+	width: 75%;
+	overflow: hidden;
+}
+
+#matchupPopupPageSingle.ui-dialog.dialog-custom {
+	height: 100%;
+}
+
+.debug {
+	width: 70%;
+	background: transparent;
+	color: lightGrey;
+	text-align: center;
+	font-weight: bold;
+	color:#fff;
+	padding-top:5px;
+	clear:both;
+}
+
+/* ================================================================= stats === */
+#details_block_stats table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0;
+}
+
+#details_block_stats th,
+#details_block_stats td {
+    width: 33%;
+    text-align: center;
+    padding: 5px;
+}
+
+#details_block_stats th {
+    color: #07223D;
+}
+
+#details_block_stats td {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #959289;
+    border-bottom: 0;
+}
+
+#details_block_stats td:first-child ,
+#details_block_stats td:last-child {
+    color: #00488d;
+    border-left: 0;
+    border-right: 0;
+}
+
+#details_block_stats tr:last-child td {
+    border-bottom: 2px solid #959289;
+}
+
+.ui-dialog#matchupPopupPage {
+      background-color: rgba(0,0,0,0.7); !important;
+}
+
+.ui-dialog#matchupPopupPageSingle {
+      background-color: rgba(0,0,0,0.7); !important;
+}
+
+.opaque {
+	opacity:1;
+}

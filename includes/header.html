@@ -1,0 +1,66 @@
+<div class="overlay"></div>
+
+    <script>
+	    doLogout = function(divId) {
+			if(_gaq){
+				//console.log("GOOGLE ANALYTIC: logout");
+				_gaq.push(['_trackPageview', 'logout']);
+			}
+			toggleDiv(divId);
+			cbs.logOut();
+	    }
+		
+		exitToCollegeBasketballHome = function() {
+			if(_gaq){
+				//console.log("GOOGLE ANALYTIC: exit_to_college_basketball_home");
+				_gaq.push(['_trackPageview', 'exit_to_college_basketball_home']);
+			}
+			menuClickExternal('menu','http://m.cbssports.com/s/21166/Home?', "_blank");
+		}
+		
+		exitToCollegeBasketballScoreboard = function() {
+			if(_gaq){
+				//console.log("GOOGLE ANALYTIC: exit_to_college_basketball_scoreboard");
+				_gaq.push(['_trackPageview', 'exit_to_college_basketball_scoreboard']);
+			}
+			menuClickExternal('menu','http://m.cbssports.com/s/21166/NCAABScoreboard?', "_blank");
+		}
+	</script>
+
+    <div data-role="navbar"> 
+        <ul class="nav group">
+            <li id="logo"><a href="#" /></li>
+        </ul>
+	<a id="menuBtn" href="javascript:menuToggle();" class="ui-btn-right btn-menu">Menu</a>
+    </div>
+
+    <div id="menu-home" class="menu">
+        <ul class="dropDownMenu">     
+            <li><a href="javascript:exitToCollegeBasketballHome();">College Basketball Home</a></li>     
+            <li><a href="javascript:exitToCollegeBasketballScoreboard();">College Basketball Scoreboard</a></li>
+            <li id="menu_feedback" class="menu_item"><a href="mailto:sports-mobile@cbsinteractive.com?subject=Fantasy Bracket Games Feedback">Feedback</a></li>
+        </ul>
+    </div>
+    <div id="menu-brackets-home" class="menu">
+        <ul class="dropDownMenu">     
+            <!--<li id="menu_rules" class="menu_item"><a href="javascript:toRules();">Rules</a></li>-->     
+            <li id="menu_logout" class="menu_item"><a href="javascript:doLogout('menu-brackets-home');">Logout</a></li>
+            <li id="menu_separator_1" class="menu_item"><div class="separator"></div></li>
+            <li id="menu_basketballhome" class="menu_item"><a href="javascript:exitToCollegeBasketballHome();">College Basketball Home</a></li>
+            <li id="menu_basketballscoreboard" class="menu_item"><a href="javascript:exitToCollegeBasketballScoreboard();">College Basketball Scoreboard</a></li>
+            <li id="menu_feedback" class="menu_item"><a href="mailto:sports-mobile@cbsinteractive.com?subject=Fantasy Bracket Games Feedback">Feedback</a></li>     
+        </ul>
+    </div>
+    <div id="menu" class="menu">
+        <ul class="dropDownMenu">     
+            <li id="menu_home" class="menu_item"><a href="javascript:menuClick('menu','index.html');">Brackets Home</a></li>
+            <li id="menu_bracket" class="menu_item"><a href="#">View Bracket</a></li>
+            <li id="menu_standings" class="menu_item"><a href="#">Standings</a></li>
+            <li id="menu_rules" class="menu_item"><a href="#">Rules</a></li>     
+            <li id="menu_logout" class="menu_item"><a href="javascript:doLogout('menu');">Logout</a></li>
+            <li id="menu_separator_1" class="menu_item"><div class="separator"></div></li>
+            <li id="menu_basketballhome" class="menu_item"><a href="javascript:exitToCollegeBasketballHome();">College Basketball Home</a></li>
+            <li id="menu_basketballscoreboard" class="menu_item"><a href="javascript:exitToCollegeBasketballScoreboard();">College Basketball Scoreboard</a></li>
+            <li id="menu_feedback" class="menu_item"><a href="mailto:sports-mobile@cbsinteractive.com?subject=Fantasy Bracket Games Feedback">Feedback</a></li>     
+        </ul>
+    </div>
